@@ -47,13 +47,15 @@ function compute() {
 function operator(entry) {
     completeNum += document.getElementById("current-entry").value + " " + entry + " ";
     if(document.getElementById("current-entry").value != "") currentEquation.push(currentNum);
+    document.getElementById("current-entry").value = eval(currentEquation.join(''));
     currentEquation.push(entry);
     console.log('New Instance')
     for (let i = 0; i < currentEquation.length; i++) {
         console.log(currentEquation[i])
     }
+
     document.getElementById("complete-input").value = completeNum;
-    document.getElementById("current-entry").value = currentNum;
+
     currentNum = "0";
     periodOnce = 0;
 }
