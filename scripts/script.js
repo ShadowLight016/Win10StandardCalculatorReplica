@@ -35,7 +35,7 @@ function enterNum(num) {
 
 function compute() {
     completeNum += document.getElementById("current-entry").value;
-    if(document.getElementById("current-entry").value != "") currentEquation.push(currentNum)
+    if(document.getElementById("current-entry").value != "") currentEquation.push(document.getElementById("current-entry").value)
     document.getElementById("complete-input").value = completeNum;
     calculate();
     completeNum = "";
