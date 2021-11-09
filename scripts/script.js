@@ -45,17 +45,18 @@ function compute() {
 }
 
 function operator(entry) {
-    completeNum += document.getElementById("current-entry").value + " " + entry + " ";
-    if(document.getElementById("current-entry").value != "") currentEquation.push(currentNum);
+    if(document.getElementById("current-entry").value != ""){
+        completeNum += document.getElementById("current-entry").value + " " + entry + " ";
+        currentEquation.push(document.getElementById("current-entry").value);
+    }
+
     document.getElementById("current-entry").value = eval(currentEquation.join(''));
     currentEquation.push(entry);
     console.log('New Instance')
     for (let i = 0; i < currentEquation.length; i++) {
         console.log(currentEquation[i])
     }
-
     document.getElementById("complete-input").value = completeNum;
-
     currentNum = "0";
     periodOnce = 0;
 }
