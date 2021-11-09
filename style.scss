@@ -1,0 +1,22 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.complete-input{
+    border: none;
+    border-top: 1px solid;
+    border-left: 1px solid;
+    border-right: 1px solid;
+    text-align: right;
+}
+
+.current-num {
+    border: none;
+    border-bottom: 1px solid;
+    border-left: 1px solid;
+    border-right: 1px solid;
+    text-align: right;
+}
