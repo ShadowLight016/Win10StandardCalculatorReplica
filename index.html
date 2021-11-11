@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="./styles/style.css">
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <script src="./scripts/script.js"></script>
+    <script src="./scripts/calc.js"></script>
 </head>
 <body>
     <main class="calculatorContainer">
@@ -33,10 +33,11 @@
                 <button class="btn btn-secondary w-100" type="button" onclick="calPercent()">%</button>
             </div>
             <div class="col-md-3 p-2">
-                <button class="btn btn-secondary w-100" type="button" onclick="clearCurrent()">CE</button>
+                <button class="btn btn-secondary w-100" type="button" onclick="operator('mod')">mod</button>
             </div>
-            <div class="col-md-3 p-2">
-                <button class="btn btn-secondary w-100" type="button" onclick="clearAll()">C</button>
+            <div class="col-md-3 p-2 d-flex">
+                <button class="btn btn-secondary w-50" type="button" onclick="clearEntry()">CE</button>
+                <button class="btn btn-secondary w-50" type="button" onclick="clearAll()">C</button>
             </div>
             <div class="col-md-3 p-2">
                 <button class="btn btn-secondary w-100" type="button" onclick="deleteLastEntered()">&larr;</button>
@@ -109,7 +110,7 @@
                 <button class="btn btn-dark w-100" type="button" onclick="enterNum('.')">.</button>
             </div>
             <div class="col-md-3 p-2">
-                <button class="btn btn-primary w-100 equals-btn" type="button" onclick="compute()">&equals;</button>
+                <button class="btn btn-primary w-100 equals-btn" type="button" onclick="operator('=')">&equals;</button>
             </div>
         </div>
         
